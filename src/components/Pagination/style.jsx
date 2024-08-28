@@ -1,10 +1,5 @@
 import styled from "styled-components";
-import {
-  PRIMARY_COLOR,
-  SECONDARY_COLOR,
-  TERTIARY_COLOR,
-  WHITE,
-} from "../../share/style";
+import { SECONDARY_COLOR, TERTIARY_COLOR, WHITE } from "../../share/style";
 
 export const ContainerPagination = styled.div`
   margin: 0 auto;

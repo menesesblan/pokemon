@@ -1,10 +1,8 @@
 import styled from "styled-components";
-import { WHITE } from "../../share/style";
 
-export const Container = styled.div`
+export const ContainerEmptyState = styled.div`
   display: grid;
   justify-content: center;
-  color: ${WHITE};
   border-radius: 5px;
   width: 100%;
   max-width: 400px;
@@ -13,10 +11,12 @@ export const Container = styled.div`
   text-align: center;
   line-height: 1;
 
-  .container__img {
-    width: 100%;
-    max-width: 230px;
+  .container-empty-state__img {
+    max-width: 300px;
     max-height: 230px;
     margin: 0 auto;
+  }
+  .container-empty-state__h1--color {
+    color: ${({ color }) => color};
   }
 `;

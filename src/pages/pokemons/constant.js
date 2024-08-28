@@ -1,7 +1,10 @@
 import axios from "axios";
+import Swal from "sweetalert2";
+import { PRIMARY_COLOR } from "../../share/style";
+
 export const getPokemons = (
   setPokemons,
-  setCountPokemonts,
+  setCountPokemons,
   offset,
   setLoading
 ) => {
@@ -11,10 +14,24 @@ export const getPokemons = (
     .then(({ data }) => {
       const { results, count } = data;
       setPokemons(results);
-      setCountPokemonts(count);
+      setCountPokemons(count);
       setLoading(false);
     })
     .catch((error) => {
+      Swal.fire({
+        title: "Error",
+        text: "Se produjo un error, por favor contactar con el administrador",
+        icon: "error",
+        confirmButtonText: "Aceptar",
+        confirmButtonColor: PRIMARY_COLOR,
+      });
       console.error("Error fetching data:", error);
     });
+};
+
+export const getFilterData = async (pokemons, name, setFilteredData) => {
+  const resp = await pokemons.filter((item) =>
+    item.name.toLowerCase().includes(name.toLowerCase())
+  );
+  setFilteredData(resp);
 };

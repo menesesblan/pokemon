@@ -1,11 +1,5 @@
 import styled from "styled-components";
-import {
-  BLACK,
-  GREY_LIGHT,
-  PRIMARY_COLOR,
-  WHITE,
-  minWidthQueries,
-} from "../../share/style";
+import { BLACK, GREY_LIGHT, WHITE } from "../../share/style";
 
 export const ContainerCard = styled.div`
   border: 1px solid ${GREY_LIGHT};
@@ -38,7 +32,7 @@ export const ContainerCard = styled.div`
       text-align: start;
 
       .container-card__title {
-        font-size: 28px;
+        font-size: 25px;
         font-weight: bolder;
         color: ${BLACK};
         text-transform: capitalize;
@@ -49,26 +43,6 @@ export const ContainerCard = styled.div`
         font-size: 17px;
         font-weight: 500;
         line-height: 1.1;
-      }
-
-      .container-card__buttonAction {
-        display: flex;
-        justify-content: end;
-        align-items: end;
-        margin-right: 20px;
-        padding: 5px 0;
-
-        button {
-          width: 25px;
-          background-color: ${PRIMARY_COLOR};
-          height: 25px;
-          border: none;
-          border-radius: 100%;
-
-          img {
-            width: 15px;
-          }
-        }
       }
     }
   }

@@ -12,3 +12,9 @@ body {
 code {
   font-family: "Mandali", sans-serif;
 }
+
+.MuiDialog-container .MuiPaper-root{
+  max-width: 500px;
+  width: 100%;
+}
+

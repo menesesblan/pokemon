@@ -10,7 +10,6 @@ const Card = ({ id, img, title, info, onclick }) => {
         </div>
         <div className="container-card__text">
           <div className="container-card__title">{title}</div>
-          <div className="container-card__info">{info}</div>
         </div>
       </div>
     </ContainerCard>

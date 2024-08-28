@@ -1,11 +1,5 @@
 import styled from "styled-components";
-import {
-  BLACK,
-  GREY_LIGHT,
-  minWidthQueries,
-  SECONDARY_COLOR,
-  WHITE,
-} from "../../share/style";
+import { minWidthQueries, SECONDARY_COLOR } from "../../share/style";
 
 export const ContainerInput = styled.div`
   .container-input__input {

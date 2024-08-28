@@ -1,18 +1,26 @@
 import axios from "axios";
 
-export const getPokemon = (url, setAbilily, setTypes, setIsLoading, setImg) => {
+export const getPokemon = (
+  url,
+  setAbility,
+  setTypes,
+  setIsLoading,
+  setImg,
+  setError
+) => {
   setIsLoading(true);
   axios
     .get(url)
     .then(({ data }) => {
       const { abilities, types, sprites } = data;
       const { other } = sprites;
-      setAbilily(abilities);
+      setAbility(abilities);
       setTypes(types);
-      setIsLoading(false);
       setImg(other.home.front_default);
+      setIsLoading(false);
     })
     .catch((error) => {
+      setError(true);
       console.error("Error fetching data:", error);
     });
 };

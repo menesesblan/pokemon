@@ -1,13 +1,13 @@
 import React from "react";
 import PokemonImg from "../../assets/images/pokemon_corious.png";
-import { Container } from "./style";
+import { ContainerEmptyState } from "./style";
 
-const EmptyState = ({ text }) => {
+const EmptyState = ({ text, color }) => {
   return (
-    <Container>
-      <img className="container__img" src={PokemonImg} alt="" />
-      <h1>{text}</h1>
-    </Container>
+    <ContainerEmptyState color={color}>
+      <img className="container-empty-state__img" src={PokemonImg} alt="" />
+      <h1 className="container-empty-state__h1--color">{text}</h1>
+    </ContainerEmptyState>
   );
 };
 
