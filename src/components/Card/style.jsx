@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {
+  BLACK,
   GREY_LIGHT,
   PRIMARY_COLOR,
   WHITE,
@@ -14,17 +15,19 @@ export const ContainerCard = styled.div`
 
   .container-card__dataCard {
     display: grid;
-    grid-template-columns: 3fr 4fr;
-    height: 100%;
+    grid-template-columns: 40% 60%;
+    min-height: 100px;
+    gap: 10px;
     cursor: pointer;
+    margin-right: 10px;
 
     .container-card__logo {
       display: flex;
-      justify-content: center;
+      justify-content: end;
       align-items: center;
 
       .container-card__imgLogo {
-        width: 100px;
+        width: 70px;
       }
     }
 
@@ -37,7 +40,9 @@ export const ContainerCard = styled.div`
       .container-card__title {
         font-size: 28px;
         font-weight: bolder;
-        color: ${PRIMARY_COLOR};
+        color: ${BLACK};
+        text-transform: capitalize;
+        line-height: 1;
       }
 
       .container-card__info {

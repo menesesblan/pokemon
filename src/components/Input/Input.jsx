@@ -1,9 +1,9 @@
 import React from "react";
 import { ContainerInput } from "./style.jsx";
 
-const Input = ({ type, onChange, name, value, placeholder }) => {
+const Input = ({ type, onChange, name, value, placeholder, icon }) => {
   return (
-    <ContainerInput>
+    <ContainerInput icon={icon}>
       <div>
         <input
           className="container-input__input"

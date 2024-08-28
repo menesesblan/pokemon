@@ -1,7 +1,13 @@
 import React, { useState } from "react";
-import Typography from "@mui/material/Typography";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
+import {
+  BLACK,
+  SECONDARY_COLOR,
+  TERTIARY_COLOR,
+  WHITE,
+} from "../../share/style";
+import { ContainerPagination } from "./style";
 
 const PaginationController = ({ count, setOffset }) => {
   const [page, setPage] = useState(1);
@@ -12,10 +18,18 @@ const PaginationController = ({ count, setOffset }) => {
 
   let countPokemonts = Math.ceil(count / 20);
   return (
-    <Stack spacing={2}>
-      <Typography>Page: {page}</Typography>
-      <Pagination count={countPokemonts} page={page} onChange={handleChange} />
-    </Stack>
+    <ContainerPagination>
+      <Stack spacing={2}>
+        <Pagination
+          count={countPokemonts}
+          page={page}
+          onChange={handleChange}
+          variant="outlined"
+          shape="rounded"
+          siblingCount={0}
+        />
+      </Stack>
+    </ContainerPagination>
   );
 };
 

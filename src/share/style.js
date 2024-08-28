@@ -26,10 +26,9 @@ export const minWidthQueries = {
 };
 
 //COLORES DEL PROYECTO
-export const PRIMARY_COLOR = "#0B1957";
-export const SECONDARY_COLOR = "#5784E6";
-export const TERTIARY_COLOR = "#D1E8FF";
-export const QUATERNARY_COLOR = "#F8F3EA";
+export const PRIMARY_COLOR = "#3D7DCA";
+export const SECONDARY_COLOR = "#003A70";
+export const TERTIARY_COLOR = "#FFCB05";
 
 //COLORES
 export const WHITE = "#FFFFFF";
