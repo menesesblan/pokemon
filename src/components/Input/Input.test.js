@@ -20,15 +20,15 @@ describe("Input", () => {
   };
 
   test("should render placeholder", () => {
-    const { wrapper } = makeWrapper({ placeholder: "buscar" });
+    const { wrapper, props } = makeWrapper({ placeholder: "buscar" });
     const { getByPlaceholderText } = wrapper;
-    expect(getByPlaceholderText("buscar")).toBeDefined();
+    expect(getByPlaceholderText(props.placeholder)).toBeDefined();
   });
 
   test("should render input", () => {
-    const { wrapper } = makeWrapper({ placeholder: "buscar" });
+    const { wrapper, props } = makeWrapper({ placeholder: "buscar" });
     const { getByPlaceholderText } = wrapper;
-    expect(getByPlaceholderText("buscar")).toBeDefined();
+    expect(getByPlaceholderText(props.placeholder)).toBeDefined();
   });
 
   test("should render the onchange in the input", () => {

@@ -21,6 +21,5 @@ export const getPokemon = (
     })
     .catch((error) => {
       setError(true);
-      console.error("Error fetching data:", error);
     });
 };

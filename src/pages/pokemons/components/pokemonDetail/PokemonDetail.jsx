@@ -4,7 +4,7 @@ import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import { getPokemon } from "./constant";
-import { DialogItem, DialogImg, ContainerDialog, Chip } from "./style";
+import { ContainerDialog } from "./style";
 import Loading from "../../../../components/Loading/Loading";
 import EmptyState from "../../../../components/EmptyState/EmptyState";
 import { BLACK } from "../../../../share/style";
@@ -27,7 +27,7 @@ const PokemonDetail = ({ open, setOpen, data }) => {
   }, [open]);
 
   return (
-    <Dialog open={open} onClose={handleClose}>
+    <Dialog open={open} onClose={handleClose} data-testid="dialog">
       <ContainerDialog>
         {error ? (
           <EmptyState
@@ -41,7 +41,7 @@ const PokemonDetail = ({ open, setOpen, data }) => {
             ) : (
               <>
                 <h2 className="pokemon-detail__title">{name}</h2>
-                <DialogContent>
+                <DialogContent data-testid="dialogContent">
                   <img className="container-dialog__img" src={img} alt="" />
                   <div className="container-dialog__container-item container-dialog__container-item--primary">
                     <h2>Habilidades</h2>

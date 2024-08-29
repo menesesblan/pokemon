@@ -6,7 +6,7 @@ import searchIcon from "../../assets/icons/search_icon.png";
 
 const Header = ({ handleSearch, searchPokemon, hasData }) => {
   return (
-    <ContainerHeader>
+    <ContainerHeader data-testid="header">
       <img
         className="container-header__logo"
         src={PokemonLogo}

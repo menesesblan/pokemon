@@ -36,6 +36,7 @@ const Pokemon = () => {
 
   useEffect(() => {
     getFilterData(pokemons, searchPokemon, setFilteredData);
+    console.log(hasData);
   }, [searchPokemon, pokemons]);
 
   return (
@@ -51,7 +52,7 @@ const Pokemon = () => {
         ) : !hasData ? (
           <EmptyState text={"No se encontró el pokémon"} />
         ) : (
-          <div className="container-pokemon__cards">
+          <div className="container-pokemon__cards" data-testid="cards">
             {filteredData.map((data) => {
               return (
                 <Card
