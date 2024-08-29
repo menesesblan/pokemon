@@ -14,7 +14,10 @@ const Loading = () => {
           color: TERTIARY_COLOR,
         }}
       >
-        <CircularProgress sx={{ color: TERTIARY_COLOR }} />
+        <CircularProgress
+          sx={{ color: TERTIARY_COLOR }}
+          data-testid="icon_loading"
+        />
         <h3>Cargando..</h3>
       </Box>
     </ContainerLoading>

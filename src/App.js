@@ -1,3 +1,4 @@
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Pokemon from "./pages/pokemons/Pokemons";
 import EmptyState from "./components/EmptyState/EmptyState";
