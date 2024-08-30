@@ -36,7 +36,6 @@ const Pokemon = () => {
 
   useEffect(() => {
     getFilterData(pokemons, searchPokemon, setFilteredData);
-    console.log(hasData);
   }, [searchPokemon, pokemons]);
 
   return (
