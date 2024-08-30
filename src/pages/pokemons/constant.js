@@ -25,7 +25,7 @@ export const getPokemons = (
         confirmButtonText: "Aceptar",
         confirmButtonColor: PRIMARY_COLOR,
       });
-      console.error("Error fetching data:", error);
+      setLoading(false);
     });
 };
 
